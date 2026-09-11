@@ -589,6 +589,7 @@ header nav {
   gap: 4px;
   padding: 0 24px;
   width: max-content;
+  margin: 0 auto;
 }
 
 .frame {

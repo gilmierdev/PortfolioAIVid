@@ -12,6 +12,12 @@
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// Open straight on the work section on load / refresh
+window.addEventListener('load', () => {
+  const work = document.getElementById('work');
+  if (work) work.scrollIntoView();
+});
+
 // 1) Sticky nav background + hide on scroll down
 const header = document.querySelector('header');
 let lastScroll = 0;
