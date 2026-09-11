@@ -184,44 +184,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
 
-// 7) Contact form — submits to Netlify Forms (requires deployment on Netlify)
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
 
-function encodeFormData(form) {
-  return new URLSearchParams(new FormData(form)).toString();
-}
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  const original = btn.textContent;
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-  formStatus.textContent = '';
-  formStatus.classList.remove('error');
-
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encodeFormData(contactForm),
-  })
-    .then((response) => {
-      if (!response.ok) throw new Error('Submission failed');
-      btn.textContent = 'Message sent';
-      formStatus.textContent = "Thanks — I'll reply within a day or two.";
-      contactForm.reset();
-      setTimeout(() => { btn.textContent = original; }, 2600);
-    })
-    .catch(() => {
-      btn.textContent = original;
-      formStatus.textContent = "Couldn't send that. Email me directly at gilmiercabil@gmail.com instead.";
-      formStatus.classList.add('error');
-    })
-    .finally(() => {
-      btn.disabled = false;
-    });
-});
 
 // 8) Single, restrained reveal — section headers only, once
 if (!prefersReducedMotion) {
