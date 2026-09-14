@@ -151,7 +151,7 @@ const videos = [
     title: "Social Media Advertisement",
     category: "Social Media",
     description: "Short-form promotional video edited for social media.",
-    driveUrl: "https://drive.google.com/file/d/1A08ywN6TyWPc3Eock8opXAnA2ObHqHB5/view?usp=drive_link",
+    driveUrl: "https://drive.google.com/file/d/11Rz761o8WrVvBeWuD-zubItv9E6QeTOu/view?usp=sharing",
     thumbnail: "./assets/thumbnails/4.png"
   },
   {
