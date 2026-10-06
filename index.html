@@ -1,420 +1,197 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gilmier Ej Cabil — AI ads specialist &amp; video editor</title>
-<meta name="description" content="Gilmier Ej Cabil builds AI-generated video ads for eCommerce brands, from the first frame to a finished ad — UGC-style, talking-head, VSL and product video.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gilmier Ej Cabil — AI Ads Specialist &amp; Video Editor</title>
+  <meta name="description" content="Gilmier Ej Cabil builds AI-generated video ads for eCommerce brands — UGC-style, talking-head, VSL and product video.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ TIMELINE RAIL (desktop scroll nav) ============ -->
-  <nav class="rail" id="rail" aria-label="Section timeline">
-    <div class="rail-code" id="railCode">00:00</div>
-    <ol class="rail-track">
-      <li><button data-target="home" class="rail-dot active" aria-label="Intro"><span>Intro</span></button></li>
-      <li><button data-target="video-portfolio" class="rail-dot" aria-label="Work"><span>Work</span></button></li>
-      <li><button data-target="framework" class="rail-dot" aria-label="Approach"><span>Approach</span></button></li>
-      <li><button data-target="services" class="rail-dot" aria-label="Services"><span>Services</span></button></li>
-      <li><button data-target="about" class="rail-dot" aria-label="About"><span>About</span></button></li>
-      <li><button data-target="contact" class="rail-dot" aria-label="Contact"><span>Contact</span></button></li>
-    </ol>
-  </nav>
+  <!-- ============ TOP SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- ============ NAVIGATION ============ -->
-  <header>
-    <nav class="wrap">
-      <a href="#home" class="logo">Gilmier Cabil</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span>
+  <header class="site-header" id="header">
+    <div class="wrap header-inner">
+      <div class="brand-group">
+        <a href="#home" class="brand-logo">Gilmier Cabil</a>
+        <div class="live-status-pill">
+          <span class="live-dot"></span>
+          <span class="live-text">Manila, PH <span id="manilaTime"></span></span>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#video-portfolio">Work</a></li>
-        <li><a href="#framework">Approach</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Request a test ad</a>
-    </nav>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <div class="wrap hero-inner">
-      <div class="hero-content">
-        <h1>AI ad videos,<br>from first frame<br>to finished cut.</h1>
-        <p class="hero-desc">I'm Gilmier Ej Cabil, an AI ads specialist and video editor from the Philippines with years of hands-on experience in AI video editing and creation. I build AI-generated video ads for eCommerce brands — UGC-style, talking-head, VSL and product video — end to end, from the first prompt to a finished, performance-ready cut.</p>
-        <div class="hero-cta">
-          <a href="#video-portfolio" class="btn btn-primary">See the work</a>
-          <a href="#contact" class="btn btn-ghost">Request a test ad</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-image-frame">
-          <img src="assets/image.png" alt="Still frame from a recent AI-generated ad" loading="eager">
-          <div class="frame-tag"><span class="rec-dot"></span>rec 00:00:24:12</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <!-- ============ 1. HOME ============ -->
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            AI video ads,<br>
+            from first frame<br>
+            to finished cut.
+          </h1>
 
-  <!-- ============ INTRO STATEMENT ============ -->
-  <section class="intro-statement">
-    <div class="wrap intro-inner">
-      <p class="intro-lead">A winning ad isn't luck. It's a hook, a problem the buyer recognizes, a mechanism that explains why the product works, proof, and one clear call to action — in that order, usually under 30 seconds.</p>
-    </div>
-  </section>
+          <p class="hero-desc">
+            I'm Gilmier Ej Cabil, an AI ads specialist and video editor from the Philippines. 
+            I build AI-generated video ads for eCommerce brands — UGC-style, talking-head, VSL and product video, 
+            from the first prompt to a finished, performance-ready cut.
+          </p>
 
-  <!-- ============ VIDEO PORTFOLIO (Google Drive) ============ -->
-  <section class="video-portfolio" id="video-portfolio">
-    <div class="wrap">
-      <div class="section-header">
-        <span class="section-label">MY WORK</span>
-        <h2>The Work Speaks First.</h2>
-        <p>A selection of AI-generated ads, creative videos, and edited content.</p>
-      </div>
-
-      <div class="video-filters" id="videoFilters" role="group" aria-label="Filter videos by category">
-        <button class="video-filter active" type="button" data-category="all" aria-pressed="true">All</button>
-        <button class="video-filter" type="button" data-category="AI Ads" aria-pressed="false">AI Ads</button>
-        <button class="video-filter" type="button" data-category="Video Editing" aria-pressed="false">Video Editing</button>
-        <button class="video-filter" type="button" data-category="Social Media" aria-pressed="false">Social Media</button>
-        <button class="video-filter" type="button" data-category="Other" aria-pressed="false">Other</button>
-      </div>
-
-      <div class="video-grid" id="videoGrid"></div>
-    </div>
-  </section>
-
-  <!-- ============ FRAMEWORK ============ -->
-  <section class="framework" id="framework">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>How I build a winning ad</h2>
-        <p>The same structure behind every spec ad on this site — no more than 30 seconds, five moves.</p>
-      </div>
-
-      <div class="framework-grid">
-        <div class="framework-item">
-          <span class="framework-tc">00:00</span>
-          <h3>Hook</h3>
-          <p>The first few seconds earn the rest of the watch — a specific moment, not a generic opener.</p>
-        </div>
-        <div class="framework-item">
-          <span class="framework-tc">00:03</span>
-          <h3>Problem</h3>
-          <p>Name the problem the buyer already recognizes, and let it sit before the product shows up.</p>
-        </div>
-        <div class="framework-item">
-          <span class="framework-tc">00:08</span>
-          <h3>Mechanism</h3>
-          <p>Explain why this product works when whatever they tried before didn't.</p>
-        </div>
-        <div class="framework-item">
-          <span class="framework-tc">00:16</span>
-          <h3>Proof</h3>
-          <p>Reviews, results or a demo — something that makes the claim believable, not just louder.</p>
-        </div>
-        <div class="framework-item">
-          <span class="framework-tc">00:24</span>
-          <h3>Call to action</h3>
-          <p>One clear next step. Not three options — one.</p>
-        </div>
-      </div>
-
-      <div class="storyboard">
-        <div class="storyboard-header">Example storyboard</div>
-        <div class="storyboard-scroll">
-          <table class="storyboard-table">
-            <thead>
-              <tr><th>Time</th><th>Scene</th><th>Voice</th><th>Beat</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>0–3s</td><td>Person visibly frustrated</td><td>"I wasted $200 before finding this."</td><td>Hook</td></tr>
-              <tr><td>3–7s</td><td>Show the problem</td><td>"Nothing seemed to work..."</td><td>Problem</td></tr>
-              <tr><td>7–15s</td><td>Product introduced</td><td>"Then I found..."</td><td>Solution</td></tr>
-              <tr><td>15–23s</td><td>Product demo</td><td>"Here's why it actually works..."</td><td>Mechanism</td></tr>
-              <tr><td>23–30s</td><td>Result and CTA</td><td>"Try it today."</td><td>Proof + CTA</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ AI CREATIVE ============ -->
-  <section class="ai-creative" id="ai-creative">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>Concepting</h2>
-        <p>Before a clip gets cut, it starts as a first frame — generated, tested and approved.</p>
-      </div>
-    </div>
-    <div class="filmstrip-wrap">
-      <div class="filmstrip" id="filmstrip">
-        <div class="frame frame-1">
-          <div class="frame-inner">
-            <span class="frame-label">Reference</span>
-            <p>Find a winning ad in the same category and break down why it works.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>See the work</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
           </div>
         </div>
-        <div class="frame frame-2">
-          <div class="frame-inner">
-            <span class="frame-label">First frame</span>
-            <p>Iterate the reference into an original image built around the actual product.</p>
-          </div>
-        </div>
-        <div class="frame frame-3">
-          <div class="frame-inner">
-            <span class="frame-label">Animation</span>
-            <p>Bring the frame to life — a talking-head performance or a product in motion.</p>
-          </div>
-        </div>
-        <div class="frame frame-4">
-          <div class="frame-inner">
-            <span class="frame-label">Voice</span>
-            <p>A voice track written and paced to match the hook, not read over it afterward.</p>
-          </div>
-        </div>
-        <div class="frame frame-5">
-          <div class="frame-inner">
-            <span class="frame-label">Edit</span>
-            <p>Cut, captioned and paced for the platform it's actually going to run on.</p>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame" id="heroImageFrame">
+            <img src="assets/image.png" alt="Gilmier Ej Cabil - AI Video Editor" class="hero-img">
+            <div class="frame-tag">
+              <span class="rec-dot"></span>
+              <span id="heroTimecode">REC 00:00:24:12</span>
+            </div>
+            <span class="visual-corner-badge">AI Spec Editor</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ SERVICES ============ -->
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>Services</h2>
-        <p>What's included when you bring me a brief.</p>
-      </div>
-
-      <ul class="service-list">
-        <li class="service-row">
-          <span class="service-tc">ads</span>
-          <div class="service-body">
-            <h3>AI-generated ad video</h3>
-            <p>Full production for eCommerce ads — concept, first frame, animation, voice and edit, delivered ready to run.</p>
+    <!-- ============ 2. PROJECTS ============ -->
+    <section class="projects-section" id="projects">
+      <div class="wrap">
+        <div class="section-header">
+          <span class="section-label">SELECTED WORK</span>
+          <div class="section-title-wrap">
+            <h2 class="section-title">Projects</h2>
+            <span class="projects-count">6 Direct-Play Cuts</span>
           </div>
-        </li>
-        <li class="service-row">
-          <span class="service-tc">ugc</span>
-          <div class="service-body">
-            <h3>UGC and talking-head</h3>
-            <p>My strongest format — AI-generated creators that feel native to the platform, not obviously synthetic.</p>
-          </div>
-        </li>
-        <li class="service-row">
-          <span class="service-tc">vsl</span>
-          <div class="service-body">
-            <h3>VSLs and product video</h3>
-            <p>Longer-form sales letters and product showcases, still built around the same hook-to-CTA structure.</p>
-          </div>
-        </li>
-        <li class="service-row">
-          <span class="service-tc">script</span>
-          <div class="service-body">
-            <h3>Script and storyboard</h3>
-            <p>A shot-by-shot script sent for approval before any generation starts, so direction is set early.</p>
-          </div>
-        </li>
-        <li class="service-row">
-          <span class="service-tc">cap</span>
-          <div class="service-body">
-            <h3>Captions and formatting</h3>
-            <p>Platform-ready exports and caption styling for TikTok, Meta, Instagram and YouTube.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ PROCESS ============ -->
-  <section class="process" id="process">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>Process</h2>
-        <p>What happens after a brief lands, in order.</p>
-      </div>
-
-      <ol class="process-timeline">
-        <li class="step">
-          <span class="step-number">01</span>
-          <div class="step-content">
-            <h3>Understand the brief</h3>
-            <p>Read it fully first. Ask about anything unclear, and confirm the brand, the ICP and any must-follow rules before starting.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-number">02</span>
-          <div class="step-content">
-            <h3>Find a reference</h3>
-            <p>Look at what's already winning in the category — the hook, structure, pacing and angle — without copying it.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-number">03</span>
-          <div class="step-content">
-            <h3>Concept and script</h3>
-            <p>Write the hook-to-CTA structure as a short script or storyboard, and send it for approval before generating anything.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-number">04</span>
-          <div class="step-content">
-            <h3>Generate, animate, voice</h3>
-            <p>Iterate the approved concept into an original first frame, animate it, then voice it.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-number">05</span>
-          <div class="step-content">
-            <h3>Edit and deliver a draft</h3>
-            <p>Cut, caption and mix, then send a draft rather than a finished file.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-number">06</span>
-          <div class="step-content">
-            <h3>Revise</h3>
-            <p>Take feedback and revise — I follow direction rather than go rogue on an approved concept.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="about" id="about">
-    <div class="wrap about-content">
-      <div class="about-image">
-        <img src="assets/image.png" alt="Gilmier Cabil at work" loading="lazy">
-      </div>
-      <div class="about-text">
-        <h2>The person behind the ad.</h2>
-        <p>I'm Gilmier Ej Cabil, from the Philippines. I'm an AI ads specialist and video editor with deep, hands-on experience in AI video editing and creation — building AI-generated video ads for eCommerce brands from the first prompt all the way to a finished, polished ad.</p>
-        <p>Outside client work, I run my own AI ad tests daily: new tools, new prompts, new hooks. That daily practice is where I've sharpened my craft — I've created a large body of AI video work that I'm leading with in this portfolio, and I'm open to a test project so you can see the quality before committing to anything.</p>
-        <ul class="trait-list">
-          <li>UGC and talking-head</li>
-          <li>VSLs and product video</li>
-          <li>Hook-first structure</li>
-          <li>Fast iteration</li>
-          <li>Follows direction</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TOOLKIT ============ -->
-  <section class="toolkit" id="toolkit">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>Toolkit</h2>
-        <p>Organized by what each tool does in the pipeline, not just the brand name.</p>
-      </div>
-
-      <div class="tool-groups">
-        <div class="tool-group">
-          <h4>Strategy</h4>
-          <div class="tool-pills">
-            <span>Claude</span>
-            <span>ChatGPT</span>
-            <span>Grok</span>
-          </div>
+          <p class="section-desc">Click any video to play directly. Curated vertical AI ads and commercial cuts.</p>
         </div>
-        <div class="tool-group">
-          <h4>Image generation</h4>
-          <div class="tool-pills">
-            <span>Nano Banana Pro</span>
+
+        <!-- Video Grid: Direct inline playback on click, 9:15 vertical aspect, title only -->
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT ============ -->
+    <section class="about-section" id="about">
+      <div class="wrap">
+        <div class="about-inner">
+          <div class="about-visual">
+            <img src="assets/image.png" alt="Gilmier Cabil" class="about-img" loading="lazy">
+            <div class="about-tag">Gilmier Ej Cabil</div>
           </div>
-        </div>
-        <div class="tool-group">
-          <h4>Animation</h4>
-          <div class="tool-pills">
-            <span>Higgsfield</span>
-            <span>Veo 3</span>
-            <span>Google Flow</span>
-          </div>
-        </div>
-        <div class="tool-group">
-          <h4>Voice</h4>
-          <div class="tool-pills">
-            <span>ElevenLabs</span>
-          </div>
-        </div>
-        <div class="tool-group">
-          <h4>Editing</h4>
-          <div class="tool-pills">
-            <span>CapCut Pro</span>
+
+          <div class="about-content">
+            <h2 class="section-title">About</h2>
+            
+            <p>
+              I'm <strong>Gilmier Ej Cabil</strong>, from the Philippines. I'm an AI ads specialist and video editor with hands-on experience in AI video editing and creation — building AI-generated video ads for eCommerce brands from the first prompt all the way to a finished, polished ad.
+            </p>
+            
+            <p>
+              Outside client work, I run my own AI ad tests daily: new tools, new prompts, and new hooks. That daily practice is where I've sharpened my craft. I'm always open to a test project so you can see the cut quality before committing.
+            </p>
+
+            <ul class="about-highlights">
+              <li class="highlight-item">
+                <span class="hi-index">01</span>
+                <span class="hi-text">UGC &amp; talking-head creators</span>
+              </li>
+              <li class="highlight-item">
+                <span class="hi-index">02</span>
+                <span class="hi-text">eCommerce product video &amp; VSLs</span>
+              </li>
+              <li class="highlight-item">
+                <span class="hi-index">03</span>
+                <span class="hi-text">Hook-first conversion structure</span>
+              </li>
+              <li class="highlight-item">
+                <span class="hi-index">04</span>
+                <span class="hi-text">Fast 24–48h turnaround &amp; iteration</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta" id="cta">
-    <div class="wrap">
-      <h2>Have a product to sell? Let's build the ad.</h2>
-      <p>Send me the brief, or request a test ad first — I'd rather prove the quality than ask you to take my word for it.</p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn btn-primary">Request a test ad</a>
-      </div>
-    </div>
-  </section>
+    <!-- ============ 4. CONTACT ============ -->
+    <section class="contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-inner">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-desc">Tell me about your product, or request a test ad. I reply within 24 hours.</p>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="section-header">
-        <h2>Let's create something great.</h2>
-        <p>Tell me about the product and the platform, or ask for a test ad. I reply within a day or two.</p>
-      </div>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <span class="contact-card-label">Email</span>
+              <div class="contact-card-row">
+                <a href="mailto:gilmiercabil@gmail.com" class="contact-card-val" id="emailLink">gilmiercabil@gmail.com</a>
+                <button type="button" class="btn-copy" id="copyEmailBtn" aria-label="Copy email address" title="Click to copy">
+                  <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+            </div>
 
-      <div class="contact-direct">
-        <a href="mailto:gilmiercabil@gmail.com">gilmiercabil@gmail.com</a>
-        <a href="tel:+639365081533">+63 936 508 1533</a>
+            <div class="contact-card">
+              <span class="contact-card-label">Phone / WhatsApp</span>
+              <div class="contact-card-row">
+                <a href="tel:+639365081533" class="contact-card-val">+63 936 508 1533</a>
+                <span class="contact-badge">Direct Line</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <a href="mailto:gilmiercabil@gmail.com?subject=Test%20Ad%20Request%20-%20AI%20Video" class="btn btn-primary btn-cta">
+              <span>Request a test ad</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer>
+  <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div class="logo">Gilmier Cabil</div>
-      <div class="footer-links">
-        <a href="mailto:gilmiercabil@gmail.com">Email</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-      </div>
-      <span class="copyright">© 2026 Gilmier Cabil</span>
+      <span class="footer-name">Gilmier Cabil</span>
+      <span class="footer-copy">&copy; 2026 Gilmier Cabil. All rights reserved.</span>
     </div>
   </footer>
 
-  <!-- ============ VIDEO MODAL (Google Drive player) ============ -->
-  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player">
-    <div class="video-modal-content">
-      <button class="video-modal-close" id="videoModalClose" aria-label="Close video">×</button>
-      <div class="video-player-container" id="videoPlayerContainer"></div>
-      <div class="video-modal-info">
-        <h3 class="video-modal-title" id="videoModalTitle"></h3>
-        <span class="video-modal-category" id="videoModalCategory"></span>
-        <p class="video-modal-desc" id="videoModalDesc"></p>
-      </div>
-    </div>
-  </div>
+  <!-- Toast Notification for UI Feedback -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
 
   <script src="main.js"></script>
 </body>
